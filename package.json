@@ -1,5 +1,5 @@
 {
-  "name": "mayumi",
+  "name": "orbital-example",
   "version": "1.0.0",
   "description": "ORBITAL - Example.",
   "main": "dist/app.js",

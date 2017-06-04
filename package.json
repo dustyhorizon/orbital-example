@@ -1,0 +1,71 @@
+{
+  "name": "mayumi",
+  "version": "1.0.0",
+  "description": "ORBITAL - Example.",
+  "main": "dist/app.js",
+  "babel": {
+    "plugins": [
+      [
+        "babel-plugin-root-import",
+        {
+          "rootPathSuffix": "src"
+        }
+      ],
+      [
+        "transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }
+      ]
+    ],
+    "presets": [
+      "latest",
+      "stage-0"
+    ]
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "basic-auth": "^1.1.0",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "helmet": "^3.5.0",
+    "jsonwebtoken": "^7.3.0",
+    "moment-timezone": "^0.5.11",
+    "mongoose": "^4.9.5",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "^1.8.1",
+    "ms": "^0.7.3",
+    "node-telegram-bot-api": "^0.27.0",
+    "nodemailer": "^3.1.8",
+    "pug": "^2.0.0-rc.1",
+    "shortid": "^2.2.6",
+    "url-parse": "^1.1.8",
+    "utf-8-validate": "^3.0.1",
+    "validator": "^7.0.0",
+    "ws": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-root-import": "^5.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-babili": "0.0.12",
+    "babel-preset-latest": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-watch": "^2.0.6",
+    "babili": "0.0.12",
+    "webpack": "^2.5.1"
+  },
+  "scripts": {
+    "watch": "babel -w src/ -d dist/ --copy-files",
+    "build": "babel src/ -d dist/",
+    "serve": "babel -w src/ -d dist/ | nodemon --on-change-only --watch dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
